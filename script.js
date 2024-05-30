@@ -19,3 +19,29 @@ do {
   yourName = prompt("Who are you?"); // Prompt the user for their name
 } while (!yourName); // Continue looping if the name is empty or null (falsy)
 console.log("Hello " + yourName); // Greet the user with their name
+
+for (let i = 1; i <= 100; i++) {
+  let output = "";
+  if (i % 3 === 0) {
+    output += "buzz";
+  }
+  if (i % 5 === 0) {
+    output += "fuzz";
+  }
+  console.log(output || i);
+}
+
+let size = 5;
+let board = "";
+
+for (let i = 0; i < size; i++) {
+  for (let j = 0; j < size; j++) {
+    if ((i + j) % 2 === 0) {
+      board += " ";
+    } else {
+      board += "#";
+    }
+  }
+  board += "\n";
+}
+console.log(board);
